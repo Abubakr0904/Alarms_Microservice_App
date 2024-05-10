@@ -1,15 +1,15 @@
-using Alarm.Api;
+using Alarm.Api.RabbitMQ;
 using Alarm.Api.UseCases.Alarms.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
 RabbitMQConfigurationReader.Configuration = builder.Configuration;
 
 builder.Services.AddTransient<IAlarmsService, AlarmsService>();
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 

@@ -1,3 +1,3 @@
 ﻿namespace Alarm.Api.UseCases.Alarms.Requests;
 
-public record SetAlarmRequest(string Name, string Description, DateTime alarmDate, int workerId);
+public record SetAlarmRequest(string AlarmMessage, DateTime AlarmDateInUtc, int WorkerId);

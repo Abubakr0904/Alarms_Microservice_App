@@ -1,4 +1,4 @@
-﻿namespace Alarm.Api;
+﻿namespace Alarm.Api.RabbitMQ;
 
 public static class RabbitMQConfigurationReader
 {
